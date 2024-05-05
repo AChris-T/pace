@@ -6,6 +6,7 @@ import TimeIcons from '../../Icons/TimeIcons'
 
 const HeroSection = () => {
   return (
+    <section id='home-section'>
     <div className='h-[1000px] md:h-[700px] lg:h-[700px]'>
     <div className=' backClip bg-green-Primary_1 h-[870px] md:h-[600px] lg:h-[600px]  flex flex-col md:flex-row justify-between lg:px-[160px] md:px-[40px] py-12  md:py-[90px]'>
     <div className='flex flex-col justify-center '>
@@ -43,6 +44,7 @@ const HeroSection = () => {
             </div>
     </div>
     </div>
+    </section>
   )
 }
 

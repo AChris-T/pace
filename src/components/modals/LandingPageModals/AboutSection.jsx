@@ -9,7 +9,7 @@ import CircleEarn from '../../Icons/CircleEarn'
 
 const AboutSection = () => {
   return (
-    <div>
+    <section id='about-section'>
     <div className='flex justify-center items-center'>    
     <div className='h-full lg:justify-between text-center  md:gap-[102px] gap-10 ml-8 md:ml-0 flex flex-col md:flex-row'>
         <div className='flex gap-[28px] flex-col justify-center text-center align-middle items-center'>
@@ -83,7 +83,7 @@ const AboutSection = () => {
             </div>
           </div>
           </div>
-    </div>
+    </section>
   )
 }
 

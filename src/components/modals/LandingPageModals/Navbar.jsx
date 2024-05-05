@@ -9,7 +9,7 @@ import { useDisclosure } from '@mantine/hooks'
 
 export const Navbar = () => {
   const location = useLocation();
-  const [showBorder, setShowBorder] = useState(false);
+  const [showBorder, setShowBorder] = useState({ donate: false, about: false,home:false,howToPlay:false });
 
   // Define the route path for the home page
   const homePagePath = '/';
@@ -20,26 +20,30 @@ export const Navbar = () => {
   // Check if the current location is the home page
   const isHomePage = location.pathname === homePagePath;
 
-  const scrollToDonate = () => {
-    const donateSection = document.getElementById('donate-section');
-    if (donateSection) {
-      donateSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const donateSection = document.getElementById('donate-section');
-      if (donateSection) {
-        const rect = donateSection.getBoundingClientRect();
-        const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-        setShowBorder(isInViewport);
-      }
+      const sections = ['home-section', 'about-section', 'howToPlay-section'];
+
+      sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+          setShowBorder(prevState => ({ ...prevState, [sectionId]: isInViewport }));
+        }
+      });
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  }, [])
   
 
 
@@ -56,16 +60,16 @@ export const Navbar = () => {
             <NavIcon/>
         </div>
         <div className='md:flex  items-center md:gap-4 lg:gap-[30px] hidden '>
-             <NavLink to="/"
-              className='flex font-bold text-[18px] text-[#fff]'
+            {/*  <NavLink to="/"
+              className='flex font-bold text-[px2rem(18)] text-[#fff]'
               style={({isActive})=>{
                 return{
-                  borderBottom:isActive?"5px solid white":""
+                  borderBottom:isActive?"px2rem(5) solid white":""
                 }
               }}
              >
                  Home  
-             </NavLink>
+             </NavLink> */}
             {/*  <NavLink to="/News"
               className='flex font-bold text-[18px] text-[#fff]'
               style={({isActive})=>{
@@ -99,6 +103,17 @@ export const Navbar = () => {
              {isHomePage ? (
         // Display everything on the home page
         <>
+        <div className={` ${showBorder ? 'border-b-4 border-white' : ''}`}>
+
+        <button
+          to="/"
+          className={`font-bold text-[18px] text-white ${showBorder.home ? 'border-b-4 border-white bg-green-Primary_1' : ''}`}
+          onClick={() => scrollToSection('home-section')}
+        >
+            Home
+        </button>
+        </div>
+        
           <NavLink
             to="/News"
             className='flex font-bold text-[18px] text-[#fff]'
@@ -108,6 +123,21 @@ export const Navbar = () => {
           >
             News
           </NavLink>
+          <div className={` ${showBorder.about ? 'border-b-4 border-white' : ''}`}>
+
+          <button
+            onClick={() => scrollToSection('about-section')}
+            className='flex font-bold text-[18px] text-[#fff]'
+          >
+            About
+          </button>
+          </div>
+          <button
+            onClick={() => scrollToSection('about-section')}
+            className='flex font-bold text-[18px] text-[#fff]'
+          >
+            How to play
+          </button>
           <NavLink
             to="/FAQS"
             className='flex font-bold text-[18px] text-[#fff]'
@@ -117,10 +147,10 @@ export const Navbar = () => {
           >
             FAQS
           </NavLink>
-          <div className={` ${showBorder ? 'border-b-4 border-white' : ''}`}>
+          <div className={` ${showBorder.donateSection ? 'border-b-4 border-white' : ''}`}>
 
           <button
-            onClick={scrollToDonate}
+            onClick={() => scrollToSection('donate-section')}
             className='flex font-bold text-[18px] text-[#fff]'
             style={{ borderBottom: 'none' }}
           >
@@ -130,8 +160,19 @@ export const Navbar = () => {
         </>
       ) : (
         // Display only FAQs if not on the home page
-        <NavLink
-          to={faqsPagePath}
+        <>      
+         <NavLink to="/"
+              className='flex font-bold text-[px2rem(18)] text-[#fff]'
+              style={({isActive})=>{
+                return{
+                  borderBottom:isActive?"px2rem(5) solid white":""
+                }
+              }}
+             >
+                 Home  
+             </NavLink> 
+         <NavLink
+          to="/faqs"
           className='flex font-bold text-[18px] text-[#fff]'
           style={({ isActive }) => ({
             borderBottom: isActive ? '5px solid white' : '',
@@ -139,6 +180,17 @@ export const Navbar = () => {
         >
           FAQS
         </NavLink>
+        <NavLink
+          to='/news'
+          className='flex font-bold text-[18px] text-[#fff]'
+          style={({ isActive }) => ({
+            borderBottom: isActive ? '5px solid white' : '',
+          })}
+        >
+          News
+        </NavLink>
+        </>
+
       )}
 
              
