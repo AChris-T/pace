@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "proxima_nova_rgregular", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-style: normal;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "proxima_nova_rgregular";
+  src: url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot");
+  src: url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.woff")
+      format("woff"),
+    url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.ttf")
+      format("truetype"),
+    url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.svg#proxima_nova_rgregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "proxima_nova_rgbold";
+  src: url("https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot");
+  src: url("https://litmus.com/fonts/Emails/proximanova-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://litmus.com/fonts/Emails/proximanova-bold-webfont.woff")
+      format("woff"),
+    url("https://litmus.com/fonts/Emails/proximanova-bold-webfont.ttf")
+      format("truetype"),
+    url("https://litmus.com/fonts/Emails/proximanova-bold-webfont.svg#proxima_nova_rgbold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "adelle_rgregular";
+  src: url("https://litmus.com/fonts/Emails/adelle_reg-webfont.eot");
+  src: url("https://litmus.com/fonts/Emails/adelle_reg-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://litmus.com/fonts/Emails/adelle_reg-webfont.woff")
+      format("woff"),
+    url("https://litmus.com/fonts/Emails/adelle_reg-webfont.ttf")
+      format("truetype"),
+    url("https://litmus.com/fonts/Emails/adelle_reg-webfont.svg#adelle_rgregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* .swiper {
+  width: 440px;
+  height: 820px;
+}
+
+.swiper-slide {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #008cff;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+} */
+
+.backClip{
+  --s: 180px; /* Change this to control the angle*/
+
+   background:
+    linear-gradient(to top left ,#16956C 100%,#0000 51%) top,
+    linear-gradient(#16956C 0 0) center,
+    linear-gradient(to bottom right ,#16956C 50%,#0000 50%) bottom;
+   background-size: 100% var(--s),100% calc(100% - 2*var(--s)); 
+   background-repeat: no-repeat;
+
+}
+.AboutBg{
+  background-image:linear-gradient(to left, rgba(50, 223, 156, 0.8),rgba(50, 223, 156, 0.8), rgba(5, 106, 74, 0.912)),
+  url(../../src/assets/Images/Rectangle.png);
+  display: flex;
+  width:75%;
+  border-radius: 20px;
+  align-items: center;
+  height: 272px;
+  margin-top: 77px;
+  margin-bottom: 20px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f5f5f5 gray;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 14px;
+  border: 3px solid gray;
+}
+@media only screen and (max-width: 800px) {
+  .AboutBg{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .AboutBg{
+    background-image:linear-gradient(to top, rgba(50, 223, 156, 0.8),rgba(50, 223, 156, 0.8), rgba(5, 106, 74, 0.912)),
+    url(../../src/assets/Images/Rectangle.png);
+    width:95%;
+    border-radius: 20px;
+    align-items: center;
+    background-size: cover;
+    height: 602px;
+    margin-top: 77px;
+    margin-bottom: 20px
+    
+  }
+}
+
+
