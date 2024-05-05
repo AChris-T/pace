@@ -1,7 +1,7 @@
 import Donate from "../../../assets/Images/donate.png"
 const Donation = () => {
   return (
-    <div className="flex flex-col md:flex-row mt-16  bg-green-Primary_1 md:h-[520px] w-full">
+    <setion id="donate-section" className="flex flex-col md:flex-row mt-16  bg-green-Primary_1 md:h-[520px] w-full">
     <div className="flex flex-1 ">
     <img src={Donate} alt="donate" className="object-cover w-[720px]"/>
     </div>
@@ -27,7 +27,7 @@ const Donation = () => {
    
     
       
-    </div>
+    </setion>
   )
 }
 
