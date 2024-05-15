@@ -14,7 +14,7 @@ const LandingPageLayout = () => {
     <div className="max-w-[1440px] mx-auto overflow-x-hidden ">
       <HeroSection/>
        <AboutSection/> 
-      {/*  <SliderSection/> */}
+      <SliderSection/> 
    {/*     <Blog/> */}
        <Donation/>
        <PlayStore/>

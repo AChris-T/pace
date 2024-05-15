@@ -56,10 +56,10 @@ export const Navbar = () => {
             <img src={PaceAppLogo} alt="PaceAPp" width={"45px"}/>
             <h2 className='text-2xl font-bold text-white'>The Pace App</h2>
         </div>
-        <div className='flex items-center gap-[30px]' onClick={toggle}>
+        <div className='flex items-center gap-[30px' onClick={toggle}>
             <NavIcon/>
         </div>
-        <div className='md:flex  items-center md:gap-4 lg:gap-[30px] hidden '>
+        <div className='lg:flex  items-center md:gap-4 lg:gap-[30px] hidden '>
             {/*  <NavLink to="/"
               className='flex font-bold text-[px2rem(18)] text-[#fff]'
               style={({isActive})=>{
@@ -206,10 +206,10 @@ export const Navbar = () => {
 
 
 
-         <Box maw={400} mx="auto" style={{background:" #16956C"}}>
+         <Box maw={1000} mx="auto" style={{background:" #16956C"}}>
       <Collapse in={opened} transitionDuration={1000} transitionTimingFunction="linear">
       <text>
-      <div className='flex flex-col items-center gap-4 px-2 pb-4'>
+      <div className='flex flex-col items-center gap-4 px-2 pb-4 pt-9'>
              <NavLink to="/"
               className='flex font-bold text-[18px] text-[#fff]'
               style={({isActive})=>{

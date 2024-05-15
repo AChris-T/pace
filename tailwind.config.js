@@ -36,9 +36,13 @@ export default {
           warningbg: "#FEFCF1",
         },
         red: {
-          100: "#E24742",
-          200: "#FDF4F4",
+          100: "#E03069",
+          200: "#B31A4B",
         },
+        blue:{
+          100:"#1A97B3",
+          200:"#30C1E0",
+        }
       },
       borderRadius: {
         100: "2px",
