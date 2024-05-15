@@ -4,7 +4,7 @@ import Footer from "../../components/modals/LandingPageModals/Footer"
 
 const HomeLayout = () => {
   return (
-    <div>
+    <div className="max-w-[1440px] mx-auto">
         <Navbar/>
         <Outlet/>
         <Footer/>
