@@ -113,7 +113,7 @@ const SliderSection = () => {
                 <p className='md:text-[24px] text-[15px] px-10 md:px-0 text-[#fff] font-semibold'>These are recently verified customer stories & feedback</p>
           </div>  
           <div className='relative flex justify-between mt-10'>
-              <div className="slider flex justify-between items-center lg:-ml-[360px] md:ml-[-320px] -ml-48 md:px-24 mt-36 h-full ">
+              <div className="slider flex justify-between items-center lg:-ml-[360px] md:ml-[-320px] -ml-40 md:px-24 mt-36 h-full ">
              
                 {displayedItems.map((item, index) => (
                 <div key={index} className="item w-[266px] h-[490px] md:h-[300px] md:w-[500px] lg:w-[576px]" style={{ backgroundColor: index === 2 ? 'white' : (index + activeIndex) % 2 === 0 ? 'rgba(255, 255, 255, 0.303)' : 'rgba(255, 255, 255, 0.16)' }}>
