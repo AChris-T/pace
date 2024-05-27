@@ -11,8 +11,8 @@ const Faqs = () => {
         <div className="bg-green-Primary_1 flex justify-center md:h-[150px] items-center">
         <h3 className="font-normal  text-[48px] text-[#fff] flex flex-wrap text-center py-10">Frequently Asked Questions</h3>
         </div>
-        <div className=" flex justify-center mx-4 md:mx-0 my-11 items-center gap-3 flex-col">
-        <Accordion defaultExpanded>
+        <div className="flex flex-col items-center justify-center gap-3 mx-4 md:mx-0 my-11">
+        <Accordion >
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -45,7 +45,7 @@ const Faqs = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -78,7 +78,7 @@ const Faqs = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion >
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -111,7 +111,7 @@ const Faqs = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -144,7 +144,7 @@ const Faqs = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -177,7 +177,7 @@ const Faqs = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           style={{
             background:"#16956C",
@@ -211,16 +211,16 @@ const Faqs = () => {
         </AccordionDetails>
       </Accordion>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
             <div className="w-[80%] bg-green-Primary_1 rounded-[30px] md:h-[255px] md:px-16 px-7 py-10 flex flex-col md:flex-row items-center justify-around ">
-              <div className="flex gap-8 md:gap-0 flex-col ">                
-                <div className="flex flex-row justify-start items-center leading-normal text-center " >
+              <div className="flex flex-col gap-8 md:gap-0 ">                
+                <div className="flex flex-row items-center justify-start leading-normal text-center " >
                 <h3 className="text-[48px] font-normal text-[#fff] flex text-center">Start Earning today</h3>
-                <div className='w-2 h-2  ml-1 md:mt-3 mt-20 hidden md:flex bg-white '></div>
+                <div className='hidden w-2 h-2 mt-20 ml-1 bg-white md:mt-3 md:flex '></div>
                 </div>
-                <div className="flex justify-start items-center -mt-5 ">
+                <div className="flex items-center justify-start -mt-5 ">
                 <h3 className="text-[48px] font-normal text-[#fff] leading-normal text-center">Download App for free</h3>
-                <div className='w-2 h-2  ml-1 mt-3 bg-white hidden md:flex'></div>
+                <div className='hidden w-2 h-2 mt-3 ml-1 bg-white md:flex'></div>
                 </div>
               </div>
               <div>

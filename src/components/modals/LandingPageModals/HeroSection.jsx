@@ -16,14 +16,14 @@ const HeroSection = () => {
     <div className=' backClip bg-green-Primary_1 h-[870px] md:h-[500px] lg:h-[600px]  flex flex-col md:flex-row justify-between lg:px-[160px] md:pl-[30px] md:py-12 py-[120px]   lg:py-[90px]'>
     <div className='flex flex-col justify-center mt-[-80px] '>
         <div  data-aos="fade-up" className='flex flex-wrap  md:px-0 px-4 items-center justify-center text-center  lg:justify-center md:flex-nowrap'>
-            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-semibold text-white'>Play</h2>
+            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-normal text-white myFont'>Play</h2>
             <div className='w-2 h-2 md:mt-5 mt-4 mr-3 bg-white'></div>
-            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-semibold text-white'>
+            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-normal myFont text-white'>
             Learn</h2>
-            <div className='w-2 h-2 mr-3 bg-white md:mt-7  mt-5'></div>
-            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-semibold text-white'>
+            <div className='w-2 h-2 mr-3 bg-white md:mt-5  mt-5'></div>
+            <h2 className='flex lg:text-[64px] md:text-[55px] text-[45px] font-normal myFont text-white'>
             Earn</h2>
-            <div className='w-2 h-2 md:mt-8 mt-5 mr-3 bg-white'></div>
+            <div className='w-2 h-2 md:mt-5 mt-5 mr-3 bg-white'></div>
         </div>
         <div className='flex md:text-center justify-center   md:justify-start w-full items-center lg:items-start text-center md:px-[0px]' data-aos="fade-right">
             <h2 className='text-white lg:text-[40px] text-[30px] text-center md:text-left font-medium  w-[400px] leading-10'>The Pace App makes studying fun and also reward you.</h2>

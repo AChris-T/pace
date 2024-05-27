@@ -109,10 +109,10 @@ const SliderSection = () => {
     <div>
     <div className='w-full bg-green-Primary_1 flex flex-col md:h-[708px] h-[860px] items-center lg:py-[80px] py-[46px]  lg:px-[0px]  '>
             <div className=" slidertop flex flex-col text-center gap-[15px] ">
-                <h1 className='md:text-[48px] text-[25px] font-semibold text-[#fff]'>What Our Users are Saying</h1>
+                <h1 className='md:text-[48px] text-[25px] font-normal myFont text-[#fff]'>What Our Users are Saying</h1>
                 <p className='md:text-[24px] text-[15px] px-10 md:px-0 text-[#fff] font-semibold'>These are recently verified customer stories & feedback</p>
           </div>  
-          <div className='relative flex justify-between mt-10'>
+          <div className='relative flex justify-between mt-10 md:mt-0'>
               <div className="slider flex justify-between items-center lg:-ml-[320px] md:ml-[-320px] -ml-40 md:px-24 mt-36 h-full ">
              
                 {displayedItems.map((item, index) => (

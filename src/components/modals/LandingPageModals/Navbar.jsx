@@ -5,12 +5,26 @@ import NavIcon from '../../Icons/NavIcon'
 import { NavLink,useLocation } from 'react-router-dom'
 import { Button, Group, Text, Collapse, Box } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks'
+import Aos from 'aos';
 
 
 export const Navbar = () => {
+  
   const location = useLocation();
   const [showBorder, setShowBorder] = useState({ donate: false, about: false,home:false,howToPlay:false });
+  const [active,setactive] = useState(false);
 
+  window.addEventListener("scroll",function(){
+    if(this.window.scrollY > 100){
+      setactive(true)
+    }else{
+      setactive(false)
+    }
+
+  })
+  useEffect (() =>{
+    Aos.init({});
+  },[])
   // Define the route path for the home page
   const homePagePath = '/';
 
@@ -50,8 +64,9 @@ export const Navbar = () => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <div className=' border-green-Primary_4 border-b-[1px] md:border-b-0 sticky top-0 bg-gray-800 z-10'>
-    <div className='bg-green-Primary_1 flex items-center justify-between md:px-[40px] px-[20px] lg:px-[70px] py-[23px] md:border-b-[1px] border-green-Primary_4'>
+    // className={`${active ? "transition duration-700 w-full max-w-[1440px] mx-auto bg-white fixed shadow-lg top-0  " : ""} border-green-Primary_4 border-b-[1px] md:border-b-0  top-0 bg-gray-800 z-10`}
+    <div>
+    <div data-aos={active?"fade-down":""} className={`${active ? "transition  duration-700 w-full fixed shadow-lg -translate-y-1 py-[8px]  z-50 top-0 max-w-[1440px] bg-green-Primary_1 mx-auto " : "py-[14px]"} bg-green-Primary_1 flex items-center justify-between md:px-[40px] px-[20px] lg:px-[70px]  md:border-b-[1px] border-green-Primary_4`}>
         <div className='flex items-center gap-2'>
             <img src={PaceAppLogo} alt="PaceAPp" width={"45px"}/>
             <h2 className='text-2xl font-bold text-white'>The Pace App</h2>
