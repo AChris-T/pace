@@ -176,5 +176,19 @@ body {
     
   }
 }
+@media only screen and (max-width: 540px) {
+  .AboutBg{
+    background-image:linear-gradient(to top, rgba(50, 223, 156, 0.8),rgba(50, 223, 156, 0.8), rgba(5, 106, 74, 0.912)),
+    url(../../src/assets/Images/Rectangle.png);
+    width:95%;
+    border-radius: 20px;
+    align-items: center;
+    background-size: cover;
+    height: 502px;
+    margin-top: 77px;
+    margin-bottom: 20px
+    
+  }
+}
 
 
