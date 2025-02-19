@@ -69,7 +69,7 @@ export const Navbar = () => {
     <div data-aos={active?"fade-down":""} className={`${active ? "transition  duration-700 w-full fixed shadow-lg -translate-y-1 py-[8px]  z-50 top-0 max-w-[1440px] bg-green-Primary_1 mx-auto " : "py-[14px]"} bg-green-Primary_1 flex items-center justify-between md:px-[40px] px-[20px] lg:px-[70px]  md:border-b-[1px] border-green-Primary_4`}>
         <div className='flex items-center gap-2'>
             <img src={PaceAppLogo} alt="PaceAPp" width={"45px"}/>
-            <h2 className='text-2xl font-bold text-white'>The Pace App</h2>
+            <NavLink to='/' className='text-2xl font-bold text-white'>The Pace App</NavLink>
         </div>
         <div className='flex items-center gap-[30px' onClick={toggle}>
             <NavIcon/>
