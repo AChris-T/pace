@@ -266,7 +266,7 @@ export const Navbar = () => {
                  Donate 
              </NavLink> 
              <div className='relative mt-2 cursor-pointer'>
-                <NavLink to="/login" className="absolute  bg-white rounded-[50px] w-[120px] h-[50px] flex justify-center items-center text-green-Primary_1 font-bold leading-[31.2px] text-[18px]">Play</NavLink>
+                <NavLink to="https://app.paceapp.ng/login" className="absolute  bg-white rounded-[50px] w-[120px] h-[50px] flex justify-center items-center text-green-Primary_1 font-bold leading-[31.2px] text-[18px]">Play</NavLink>
                 <div  className="z-20 mt-[3px] bg-green-Primary_4 rounded-[50px] w-[120px] h-[50px]"> </div>
              </div>     
              </div>
